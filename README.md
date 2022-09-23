@@ -29,4 +29,4 @@ A starter application in spring boot & angular.
 - `node -version` to check the node version  , if not installed then we have to install node from https://nodejs.org/en/download/
 - `npm install` to create a build and load all the dependencies which are used in package.json
 - `ng serve` to start the angular application
-- 
+- Angular application will be up on http://localhost:4200/products
