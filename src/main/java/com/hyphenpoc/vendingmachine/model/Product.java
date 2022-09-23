@@ -1,16 +1,23 @@
 package com.hyphenpoc.vendingmachine.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import lombok.Builder;
+
+import javax.persistence.*;
+import java.math.BigInteger;
 
 @Entity
+@Builder
+@Table(name = "Product")
 public class Product {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int productId;
+
     private String productName;
+
     private String productDesc;
+
     private int productPrice;
 
     public Product() {

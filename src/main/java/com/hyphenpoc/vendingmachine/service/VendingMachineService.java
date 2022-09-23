@@ -9,38 +9,17 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class VendingMachineService {
+public interface VendingMachineService {
 
-    @Autowired
-    private VendingMachineRepository vendingMachineRepository;
-    public List<Product> fetchproductList(){
+    public List<Product> fetchproductList();
 
-        return vendingMachineRepository.findAll();
+    public Product saveProduct(Product product);
 
+    public String processPayment( Product product);
 
-    }
+    public Optional<Product> updateProduct(int id);
 
-    public Product saveProduct(Product product)
-    {
-       return vendingMachineRepository.save(product);
-    }
+    public Optional<Product> getProductById(int id);
 
-    public Optional<Product> getProductById(int id)
-    {
-        return vendingMachineRepository.findById(id);
-    }
-
-    public String deleteProductById(int id)
-    {
-
-        String result;
-        try {
-            vendingMachineRepository.deleteById(id);
-            result = "Product Removed Succesfully";
-        } catch (IllegalArgumentException e){
-
-            result = "Please select appropriate Product to remove";
-        }
-        return result;
-    }
+    public String deleteProductById(int id);
 }
