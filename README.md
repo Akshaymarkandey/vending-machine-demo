@@ -12,8 +12,7 @@ A starter application in spring boot & angular.
 
 ## Setting up the spring project
 * First we have to install java-8 and make sure that it has the needed policy files
-    * After installing java-8, make sure to replace the JCE policy files with the appropriate ones from:<br >
-    * A property file per environment of your application , here it is application.properties file
+    * A property file of our application , it is application.properties file
     * As we are using in memory database h2 , we have a InsertProduct.sql script added in the repo so that we will run this script on application startup
       http://localhost:8080/h2-console/
     * Now you should be ready to start working :) .
