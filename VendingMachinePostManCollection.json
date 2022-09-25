@@ -1,121 +1,179 @@
 {
-	"info": {
-		"_postman_id": "d8ea2a26-0823-43df-b93d-07e5245a35be",
-		"name": "ProductCurdCollection",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "localhost:8080/getproductlist",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8080/getproductlist",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"getproductlist"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "localhost:8080/addproduct",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n\"productName\": \"Lemon Tea\",\r\n\"productDesc\": \"Lemon Tea\",\r\n\"productPrice\": 200\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/addproduct",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"addproduct"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "localhost:8080/getproductbyid/{id}",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8080/getproductbyid/2",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"getproductbyid",
-						"2"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "localhost:8080/deleteproductbyid/2",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "localhost:8080/deleteproductbyid/2",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"deleteproductbyid",
-						"2"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "localhost:8080/updateproduct/3",
-			"request": {
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "default"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n\"productName\": \"Water\",\r\n\"productDesc\": \"Package Drinking Water\",\r\n\"productPrice\": 20\r\n}"
-				},
-				"url": {
-					"raw": "localhost:8080/updateproduct/3",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"updateproduct",
-						"3"
-					]
-				}
-			},
-			"response": []
-		}
-	]
+  "info": {
+    "_postman_id": "d8ea2a26-0823-43df-b93d-07e5245a35be",
+    "name": "ProductCurdCollection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "FetchProductList",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/getproductlist",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "getproductlist"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "AddProduct",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"productName\": \"Lemon Tea\",\r\n\"productDesc\": \"Lemon Tea\",\r\n\"productPrice\": 200\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8080/addproduct",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "addproduct"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "FetchProductById",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/getproductbyid/2",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "getproductbyid",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DeleteProduct",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8080/deleteproductbyid/2",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "deleteproductbyid",
+            "2"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UpdateProduct",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "default"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"productName\": \"Water\",\r\n\"productDesc\": \"Package Drinking Water\",\r\n\"productPrice\": 20\r\n}"
+        },
+        "url": {
+          "raw": "localhost:8080/updateproduct/3",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "updateproduct",
+            "3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PaymentDetails",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \r\n    \"email\": \"akshay.markandey5@gmail.com\",\r\n    \"name\": \"Akshay Markandey\",\r\n    \"phone\": 8007720788,\r\n    \"productInfo\": \"Water\",\r\n    \"amount\": 20\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/payment/payment-details",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "payment",
+            "payment-details"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PaymentResponse",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\r\n    \"status\": \"Success\",\r\n    \"txnId\": \"Dev9453fe4db245\",\r\n    \"hash\": \"775fcceb12bcb2c521bfeec4062bdcdf1d0d1d0d54135ceee2bc2408ce64161cd1367842d5d6aac478a15dfe6d29cd0d16a1cbc023ecdf411332467126d9fc53\",\r\n \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/payment/payment-response",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "payment",
+            "payment-response"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
 }
